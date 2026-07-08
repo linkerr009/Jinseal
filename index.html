@@ -8,8 +8,9 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script src="./src/js/tailwind-config.js"></script>
-<link href="./src/css/styles.css" rel="stylesheet">
+<script src="./assets/js/global.js"></script>
+<link href="./assets/css/global.css" rel="stylesheet">
+<link href="./assets/css/index.css" rel="stylesheet">
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-energy-red selection:text-white">
 <section class="xz-topbar">
@@ -23,7 +24,7 @@
 <nav class="xz-header">
 <div class="xz-header__inner">
 <a class="xz-header__brand" href="https://www.jinsealing.com/">
-<img src="./src/media/jinseal/jinseal-logo.png" alt="JinSeal">
+<img src="./assets/media/jinseal/jinseal-logo.png" alt="JinSeal">
 </a>
 <div class="xz-header__nav">
 <a href="https://www.jinsealing.com/">Home</a>
@@ -50,7 +51,7 @@
 <main class="pt-[118px] md:pt-[118px]">
 <section class="relative min-h-[90vh] flex items-center bg-deep-navy">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover object-center opacity-70" data-alt="JinSeal sealing and gasket material manufacturing hero image" src="./src/media/jinseal/jinseal-hero.jpg">
+<img class="w-full h-full object-cover object-center opacity-70" data-alt="JinSeal sealing and gasket material manufacturing hero image" src="./assets/media/jinseal/jinseal-hero.jpg">
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
 <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-12 gap-8 items-center">
@@ -137,7 +138,7 @@ More About JinSeal
 </div>
 <div class="md:col-span-6 relative">
 <div class="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-3"></div>
-<img class="w-full h-[500px] object-cover rounded-xl shadow-lg relative z-10 border border-slate-border" data-alt="JinSeal gasket and sealing product application image" src="./src/media/jinseal/jinseal-cta.jpg">
+<img class="w-full h-[500px] object-cover rounded-xl shadow-lg relative z-10 border border-slate-border" data-alt="JinSeal gasket and sealing product application image" src="./assets/media/jinseal/jinseal-cta.jpg">
 <div class="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded shadow-xl border border-slate-border flex gap-4 items-center">
 <div class="bg-silver-bg p-2 rounded">
 <span class="material-symbols-outlined text-primary text-[32px]">factory</span>
@@ -172,57 +173,57 @@ More About JinSeal
 <div class="product-panel" data-tab-panel="all">
 <div class="product-grid">
 <article class="product-card">
-<div class="product-card__media"><img alt="Spiral Wound Gasket" src="./src/media/jinseal/product-spiral-wound-gasket.jpg"></div>
+<div class="product-card__media"><img alt="Spiral Wound Gasket" src="./assets/media/jinseal/product-spiral-wound-gasket.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Spiral Wound Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">A core metallic sealing product for flanges, pressure vessels and high-demand process systems.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Gasket Hoop" src="./src/media/jinseal/product-gasket-hoop.jpg"></div>
+<div class="product-card__media"><img alt="Gasket Hoop" src="./assets/media/jinseal/product-gasket-hoop.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Gasket Hoop</h3><p class="product-card__meta font-body-md text-steel-gray">Semi-finished gasket material for spiral wound gasket production and sealing component supply.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Ring Joint Gasket" src="./src/media/jinseal/product-ring-joint-gasket.jpg"></div>
+<div class="product-card__media"><img alt="Ring Joint Gasket" src="./assets/media/jinseal/product-ring-joint-gasket.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Ring Joint Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Metallic gasket option for high-pressure and high-temperature sealing environments.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Kammprofile Gasket" src="./src/media/jinseal/product-kammprofile-gasket.jpg"></div>
+<div class="product-card__media"><img alt="Kammprofile Gasket" src="./assets/media/jinseal/product-kammprofile-gasket.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Kammprofile Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Engineered profile gasket for reliable compression and recovery in critical flange service.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="PTFE Packing" src="./src/media/jinseal/product-ptfe-packing.jpg"></div>
+<div class="product-card__media"><img alt="PTFE Packing" src="./assets/media/jinseal/product-ptfe-packing.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">PTFE Packing</h3><p class="product-card__meta font-body-md text-steel-gray">Compression packing for pumps, valves and equipment requiring low-friction chemical resistance.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Aramid Packing" src="./src/media/jinseal/product-aramid-packing.jpg"></div>
+<div class="product-card__media"><img alt="Aramid Packing" src="./assets/media/jinseal/product-aramid-packing.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Aramid Packing</h3><p class="product-card__meta font-body-md text-steel-gray">Durable gland packing for abrasive service conditions and longer sealing life.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Non-Asbestos Sheet" src="./src/media/jinseal/product-non-asbestos-sheet.jpg"></div>
+<div class="product-card__media"><img alt="Non-Asbestos Sheet" src="./assets/media/jinseal/product-non-asbestos-sheet.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Non-Asbestos Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Sheet material for cutting industrial sealing gaskets without asbestos content.</p></div>
 </article>
 <article class="product-card">
-<div class="product-card__media"><img alt="Graphite Sheet" src="./src/media/jinseal/product-graphite-sheet.jpg"></div>
+<div class="product-card__media"><img alt="Graphite Sheet" src="./assets/media/jinseal/product-graphite-sheet.jpg"></div>
 <div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Graphite Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Flexible graphite sheet material for high-temperature sealing and gasket fabrication.</p></div>
 </article>
 </div>
 </div>
 <div class="product-panel" data-tab-panel="gaskets" hidden>
 <div class="product-grid">
-<article class="product-card"><div class="product-card__media"><img alt="Spiral Wound Gasket" src="./src/media/jinseal/product-spiral-wound-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Spiral Wound Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Metallic gasket for chemical, petrochemical and refining service.</p></div></article>
-<article class="product-card"><div class="product-card__media"><img alt="Ring Joint Gasket" src="./src/media/jinseal/product-ring-joint-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Ring Joint Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Reliable ring joint sealing for high-pressure flange connections.</p></div></article>
-<article class="product-card"><div class="product-card__media"><img alt="Kammprofile Gasket" src="./src/media/jinseal/product-kammprofile-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Kammprofile Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Profiled metal core gasket designed for strong sealing recovery.</p></div></article>
-<article class="product-card"><div class="product-card__media"><img alt="Gasket Hoop" src="./src/media/jinseal/product-gasket-hoop.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Gasket Hoop</h3><p class="product-card__meta font-body-md text-steel-gray">Gasket hoop material for production and repair needs.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Spiral Wound Gasket" src="./assets/media/jinseal/product-spiral-wound-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Spiral Wound Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Metallic gasket for chemical, petrochemical and refining service.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Ring Joint Gasket" src="./assets/media/jinseal/product-ring-joint-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Ring Joint Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Reliable ring joint sealing for high-pressure flange connections.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Kammprofile Gasket" src="./assets/media/jinseal/product-kammprofile-gasket.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Kammprofile Gasket</h3><p class="product-card__meta font-body-md text-steel-gray">Profiled metal core gasket designed for strong sealing recovery.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Gasket Hoop" src="./assets/media/jinseal/product-gasket-hoop.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Gasket Hoop</h3><p class="product-card__meta font-body-md text-steel-gray">Gasket hoop material for production and repair needs.</p></div></article>
 </div>
 </div>
 <div class="product-panel" data-tab-panel="packing" hidden>
 <div class="product-grid">
-<article class="product-card"><div class="product-card__media"><img alt="PTFE Packing" src="./src/media/jinseal/product-ptfe-packing.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">PTFE Packing</h3><p class="product-card__meta font-body-md text-steel-gray">For pumps, valves and equipment with chemical resistance requirements.</p></div></article>
-<article class="product-card"><div class="product-card__media"><img alt="Aramid Packing" src="./src/media/jinseal/product-aramid-packing.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Aramid Packing</h3><p class="product-card__meta font-body-md text-steel-gray">Strong packing for abrasive and heavy-duty sealing service.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="PTFE Packing" src="./assets/media/jinseal/product-ptfe-packing.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">PTFE Packing</h3><p class="product-card__meta font-body-md text-steel-gray">For pumps, valves and equipment with chemical resistance requirements.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Aramid Packing" src="./assets/media/jinseal/product-aramid-packing.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Aramid Packing</h3><p class="product-card__meta font-body-md text-steel-gray">Strong packing for abrasive and heavy-duty sealing service.</p></div></article>
 </div>
 </div>
 <div class="product-panel" data-tab-panel="sheet-materials" hidden>
 <div class="product-grid">
-<article class="product-card"><div class="product-card__media"><img alt="Non-Asbestos Sheet" src="./src/media/jinseal/product-non-asbestos-sheet.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Non-Asbestos Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Sheet material for safe, broad industrial gasket fabrication.</p></div></article>
-<article class="product-card"><div class="product-card__media"><img alt="Graphite Sheet" src="./src/media/jinseal/product-graphite-sheet.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Graphite Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Flexible graphite sheet for high-temperature sealing applications.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Non-Asbestos Sheet" src="./assets/media/jinseal/product-non-asbestos-sheet.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Non-Asbestos Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Sheet material for safe, broad industrial gasket fabrication.</p></div></article>
+<article class="product-card"><div class="product-card__media"><img alt="Graphite Sheet" src="./assets/media/jinseal/product-graphite-sheet.jpg"></div><div class="product-card__body"><h3 class="product-card__title font-headline-lg-mobile text-deep-navy text-[22px] font-bold leading-[1.25]">Graphite Sheet</h3><p class="product-card__meta font-body-md text-steel-gray">Flexible graphite sheet for high-temperature sealing applications.</p></div></article>
 </div>
 </div>
 </div>
@@ -264,14 +265,14 @@ More About JinSeal
 <p class="font-body-lg text-steel-gray">JinSeal sealing products are used across demanding process, energy and manufacturing industries.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Chemical and petrochemical sealing application" src="./src/media/jinseal/industry-chemical-petrochemical.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Chemical &amp; Petrochemical</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Food and beverage sealing application" src="./src/media/jinseal/industry-food-beverage.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Food &amp; Beverage</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Mining sealing application" src="./src/media/jinseal/industry-mining.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Mining</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Oil and gas sealing application" src="./src/media/jinseal/industry-oil-gas.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Oil &amp; Gas</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Power generation sealing application" src="./src/media/jinseal/industry-power-generation.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Power Generation</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pulp and paper sealing application" src="./src/media/jinseal/industry-pulp-paper.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Pulp &amp; Paper</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Ship industry sealing application" src="./src/media/jinseal/industry-ship.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Ship Industry</h3></div></article>
-<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Industrial sealing material application" src="./src/media/jinseal/jinseal-cta.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">OEM Equipment</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Chemical and petrochemical sealing application" src="./assets/media/jinseal/industry-chemical-petrochemical.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Chemical &amp; Petrochemical</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Food and beverage sealing application" src="./assets/media/jinseal/industry-food-beverage.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Food &amp; Beverage</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Mining sealing application" src="./assets/media/jinseal/industry-mining.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Mining</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Oil and gas sealing application" src="./assets/media/jinseal/industry-oil-gas.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Oil &amp; Gas</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Power generation sealing application" src="./assets/media/jinseal/industry-power-generation.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Power Generation</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pulp and paper sealing application" src="./assets/media/jinseal/industry-pulp-paper.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Pulp &amp; Paper</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Ship industry sealing application" src="./assets/media/jinseal/industry-ship.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">Ship Industry</h3></div></article>
+<article class="group flex flex-col bg-surface rounded-xl border border-slate-border overflow-hidden hover:shadow-lg transition-all duration-300"><div class="aspect-[4/3] overflow-hidden"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Industrial sealing material application" src="./assets/media/jinseal/jinseal-cta.jpg"></div><div class="p-5"><h3 class="font-headline-lg-mobile text-deep-navy text-[20px] font-bold leading-[1.3]">OEM Equipment</h3></div></article>
 </div>
 </div>
 </section>
@@ -356,7 +357,7 @@ Read More Stories
 
 <section class="bg-deep-navy py-section-gap-lg relative overflow-hidden">
 <div class="absolute inset-0 z-0 opacity-55">
-<img class="w-full h-full object-cover" data-alt="JinSeal sealing product call to action background" src="./src/media/jinseal/jinseal-cta.jpg">
+<img class="w-full h-full object-cover" data-alt="JinSeal sealing product call to action background" src="./assets/media/jinseal/jinseal-cta.jpg">
 </div>
 <div class="absolute inset-0 z-0 bg-deep-navy/55"></div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
@@ -432,7 +433,7 @@ Send Inquiry
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-12">
 <div class="grid gap-10 lg:grid-cols-12">
 <div class="lg:col-span-4">
-<img class="mb-6 h-14 w-auto brightness-0 invert" src="./src/media/jinseal/jinseal-logo.png" alt="JinSeal">
+<img class="mb-6 h-14 w-auto brightness-0 invert" src="./assets/media/jinseal/jinseal-logo.png" alt="JinSeal">
 <p class="font-body-md text-surface-dim max-w-sm">JinSeal is a sealing and gasket material manufacturer providing metallic and non-metallic sealing products for global industrial customers since 1997.</p>
 <div class="mt-6 flex flex-wrap gap-3">
 <span class="rounded-full border border-white/15 px-3 py-1 font-label-sm uppercase text-surface-dim">ISO 9001</span>
@@ -493,7 +494,7 @@ Request a Quote
 </div>
 </footer>
 
-<script src="./src/js/main.js"></script>
+<script src="./assets/js/index.js"></script>
 </body>
 </html>
 
