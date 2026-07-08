@@ -219,11 +219,14 @@
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(440px, 1fr);
   gap: 3rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-inquiry__content {
+  min-height: 100%;
   padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-inquiry h2,
@@ -279,7 +282,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.15rem;
-  margin-top: 1.7rem;
+  margin-top: auto;
+  padding-top: 1.7rem;
 }
 
 .contact-inquiry__channels a {
@@ -295,6 +299,29 @@
 .contact-inquiry__channels span {
   color: #7dc431;
   font-size: 19px;
+}
+
+.contact-inquiry__note {
+  margin-top: 1rem;
+  border-left: 4px solid #7dc431;
+  background: rgba(255, 255, 255, 0.74);
+  padding: 1.15rem 1.2rem;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+}
+
+.contact-inquiry__note h3 {
+  margin: 0;
+  color: #0f172a;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.contact-inquiry__note p {
+  margin: 0.55rem 0 0;
+  color: #475569;
+  font-size: 0.96rem;
+  line-height: 1.7;
 }
 
 .contact-support-list {
