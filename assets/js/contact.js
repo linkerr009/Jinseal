@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `Name: ${data.get("name") || ""}`,
       `Email: ${data.get("email") || ""}`,
       `Phone: ${data.get("phone") || ""}`,
-      `Company: ${data.get("company") || ""}`,
+      `Industry: ${data.get("industry") || ""}`,
       `Product Interest: ${data.get("product") || ""}`,
       "",
       "Message:",
