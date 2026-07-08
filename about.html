@@ -116,38 +116,7 @@ Send Inquiry
 </div>
 </section>
 
-<section class="about-impact bg-silver-bg">
-<div class="about-container">
-<div class="about-section-head">
-<div class="about-eyebrow">
-<span></span>
-<p>Our Impact</p>
-</div>
-<h2>Built for steady industrial supply.</h2>
-<p>JinSeal combines long-term manufacturing experience, a broad sealing product range and strict quality control to support customers in demanding working conditions.</p>
-</div>
-<div class="about-stats">
-<article>
-<strong>1997</strong>
-<span>Officially registered and established</span>
-</article>
-<article>
-<strong>8,000+</strong>
-<span>sqm production base with advanced facilities</span>
-</article>
-<article>
-<strong>2000</strong>
-<span>Certified with ISO 9001 quality system</span>
-</article>
-<article>
-<strong>30+</strong>
-<span>major product families and sealing material lines</span>
-</article>
-</div>
-</div>
-</section>
-
-<section class="about-process bg-white">
+<section class="about-process bg-silver-bg">
 <div class="about-container">
 <div class="about-section-head about-section-head--left">
 <div class="about-eyebrow">
@@ -199,6 +168,12 @@ Send Inquiry
 <img src="./assets/media/jinseal/factory-5.jpg" alt="JinSeal sealing product manufacturing line">
 <img src="./assets/media/jinseal/factory-6.jpg" alt="JinSeal production base workshop">
 </div>
+<button class="about-facility-carousel__nav about-facility-carousel__nav--prev" type="button" aria-label="Previous factory image" data-facility-prev>
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="about-facility-carousel__nav about-facility-carousel__nav--next" type="button" aria-label="Next factory image" data-facility-next>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
 <div class="about-facility-carousel__dots" aria-label="Factory image carousel controls">
 <button class="is-active" type="button" aria-label="Show factory image 1"></button>
 <button type="button" aria-label="Show factory image 2"></button>
@@ -312,6 +287,11 @@ Send Inquiry
 <h2>Key moments in JinSeal's development.</h2>
 <p>From registration and quality certification to international offices and brand upgrade, these milestones show the long-term development of JinSeal.</p>
 </div>
+<div class="about-timeline-shell" data-timeline-carousel>
+<div class="about-timeline-rail">
+<span>JINSEAL</span>
+<strong>Development History</strong>
+</div>
 <div class="about-timeline">
 <article><time><span>Apr</span>2013</time><p>Redesign and update company image and CIS (corporate identity system) for a much more vibrant future.</p></article>
 <article><time><span>Jan</span>2013</time><p>Representative office was set up in Stuttgart, Germany.</p></article>
@@ -330,6 +310,18 @@ Send Inquiry
 <article><time><span>Mar</span>2000</time><p>Plant established in Hushan, Cixi, China.</p></article>
 <article><time><span>Nov</span>1998</time><p>Awarded for excellent quality by the State Administration of Machinery Industry.</p></article>
 <article><time><span>Dec</span>1997</time><p>Officially registered and established.</p></article>
+</div>
+<div class="about-timeline-controls">
+<button type="button" aria-label="Previous milestone" data-timeline-prev>
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="is-playing" type="button" aria-label="Pause milestone carousel" data-timeline-toggle>
+<span class="material-symbols-outlined">pause</span>
+</button>
+<button type="button" aria-label="Next milestone" data-timeline-next>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
 </div>
 </div>
 </section>
@@ -357,22 +349,73 @@ Send Inquiry
 </div>
 </section>
 
-<section class="about-cta">
-<div class="about-cta__media">
-<img src="./assets/media/jinseal/jinseal-cta.jpg" alt="JinSeal sealing product consultation">
-<div></div>
+<section class="bg-deep-navy py-section-gap-lg relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-55">
+<img class="w-full h-full object-cover" data-alt="JinSeal sealing product call to action background" src="./assets/media/jinseal/jinseal-cta.jpg">
 </div>
-<div class="about-container">
-<div class="about-cta__content">
-<div class="about-eyebrow about-eyebrow--inverse">
-<span></span>
-<p>Send Inquiry</p>
+<div class="absolute inset-0 z-0 bg-deep-navy/55"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+<div class="lg:col-span-6">
+<div class="mb-4 flex items-center gap-2">
+<div class="h-1 w-8 bg-energy-red"></div>
+<span class="font-label-sm text-energy-red uppercase">Send Inquiry</span>
 </div>
-<h2>Need a sealing product recommendation?</h2>
-<p>Share your working medium, temperature, pressure, flange standard or drawing. JinSeal can help recommend suitable gasket, packing, sheet material or sealing accessories.</p>
-<div class="about-cta__actions">
-<a href="https://www.jinsealing.com/contact.html">Request a Quote <span class="material-symbols-outlined">arrow_forward</span></a>
-<a href="mailto:info@ginseal.com">info@ginseal.com</a>
+<h2 class="font-headline-xl text-white mb-6 text-[34px] font-extrabold leading-[1.15]">Need a sealing product recommendation?</h2>
+<p class="font-body-lg text-inverse-on-surface mb-8 max-w-2xl">
+Share your working medium, temperature, pressure, flange standard or drawing. JinSeal can recommend suitable gasket, packing, sheet material or sealing accessories for your project.
+</p>
+<div class="grid gap-4 sm:grid-cols-3">
+<div class="border-l-4 border-energy-red bg-white/10 p-4 backdrop-blur-sm">
+<p class="font-label-sm uppercase text-surface-dim">Response</p>
+<p class="font-headline-lg-mobile text-white">Fast Quote</p>
+</div>
+<div class="border-l-4 border-energy-red bg-white/10 p-4 backdrop-blur-sm">
+<p class="font-label-sm uppercase text-surface-dim">Support</p>
+<p class="font-headline-lg-mobile text-white">Material Advice</p>
+</div>
+<div class="border-l-4 border-energy-red bg-white/10 p-4 backdrop-blur-sm">
+<p class="font-label-sm uppercase text-surface-dim">Supply</p>
+<p class="font-headline-lg-mobile text-white">OEM / ODM</p>
+</div>
+</div>
+<div class="mt-8 flex flex-wrap gap-5 text-surface-dim font-mono-data text-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-energy-red text-[18px]">mail</span>info@ginseal.com</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-energy-red text-[18px]">call</span>+86 (0) 574 - 2370 6900</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<form class="bg-white p-6 shadow-2xl shadow-black/25 md:p-8">
+<div class="mb-6">
+<p class="font-label-sm uppercase text-energy-red">Inquiry Form</p>
+<h3 class="font-headline-lg-mobile text-deep-navy text-[26px] font-extrabold leading-[1.2]">Tell us what you need</h3>
+</div>
+<div class="grid gap-4 sm:grid-cols-2">
+<label class="block">
+<span class="mb-2 block font-label-sm uppercase text-steel-gray">Name</span>
+<input class="w-full border border-slate-border bg-surface px-4 py-3 text-sm text-deep-navy outline-none transition-colors placeholder:text-sm focus:border-energy-red" type="text" placeholder="Your name">
+</label>
+<label class="block">
+<span class="mb-2 block font-label-sm uppercase text-steel-gray">Email</span>
+<input class="w-full border border-slate-border bg-surface px-4 py-3 text-sm text-deep-navy outline-none transition-colors placeholder:text-sm focus:border-energy-red" type="email" placeholder="Email address">
+</label>
+<label class="block sm:col-span-2">
+<span class="mb-2 block font-label-sm uppercase text-steel-gray">Product Interest</span>
+<input class="w-full border border-slate-border bg-surface px-4 py-3 text-sm text-deep-navy outline-none transition-colors placeholder:text-sm focus:border-energy-red" type="text" placeholder="Gasket, packing, sheet material...">
+</label>
+<label class="block sm:col-span-2">
+<span class="mb-2 block font-label-sm uppercase text-steel-gray">Message</span>
+<textarea class="min-h-[120px] w-full resize-y border border-slate-border bg-surface px-4 py-3 text-sm text-deep-navy outline-none transition-colors placeholder:text-sm focus:border-energy-red" placeholder="Working condition, size, drawing or quantity"></textarea>
+</label>
+</div>
+<div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+<button class="inline-flex items-center justify-center gap-2 bg-energy-red px-7 py-3 font-label-sm uppercase tracking-wide text-white shadow-lg shadow-energy-red/20 transition-all hover:bg-primary active:scale-95" type="button">
+Send Inquiry
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<p class="text-sm text-steel-gray">Or email us directly: <a class="font-semibold text-energy-red" href="mailto:info@ginseal.com">info@ginseal.com</a></p>
+</div>
+</form>
 </div>
 </div>
 </div>
