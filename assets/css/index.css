@@ -212,6 +212,20 @@
   .product-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .about-visual {
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+  }
+
+  .about-visual__glow {
+    inset: 0 !important;
+  }
+
+  .about-visual__badge {
+    left: 1rem !important;
+    bottom: 0 !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -222,6 +236,6 @@
 
 @media (min-width: 1024px) {
   .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
