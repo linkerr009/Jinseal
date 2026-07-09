@@ -6,6 +6,12 @@
   font-variation-settings: "FILL" 1;
 }
 
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
 .xz-topbar {
   position: fixed;
   top: 0;
