@@ -72,9 +72,15 @@
   margin: 0;
   max-width: 720px;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: clamp(2.75rem, 5vw, 5.1rem);
+  font-size: 40px;
   font-weight: 800;
-  line-height: 0.98;
+  line-height: 1.1;
+}
+
+@media (max-width: 640px) {
+  .pd-hero h1 {
+    font-size: 2.25rem;
+  }
 }
 
 .pd-hero p {

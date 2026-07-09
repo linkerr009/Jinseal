@@ -73,8 +73,8 @@
 .products-hero h1 {
   max-width: 780px;
   color: #ffffff;
-  font-size: 50px;
-  line-height: 1.06;
+  font-size: 40px;
+  line-height: 1.1;
 }
 
 .products-hero p {
@@ -170,7 +170,8 @@
   gap: 0.2rem;
 }
 
-.products-category-list button {
+.products-category-list button,
+.products-category-list a {
   width: 100%;
   border: 0;
   border-left: 3px solid transparent;
@@ -181,10 +182,14 @@
   font-weight: 700;
   text-align: left;
   cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .products-category-list button:hover,
-.products-category-list button.is-active {
+.products-category-list button.is-active,
+.products-category-list a:hover,
+.products-category-list a.is-active {
   border-left-color: #7dc431;
   background: rgba(125, 196, 49, 0.1);
   color: #0f172a;
@@ -501,7 +506,7 @@
   }
 
   .products-hero h1 {
-    font-size: 2.45rem;
+    font-size: 2.25rem;
   }
 
   .products-main,

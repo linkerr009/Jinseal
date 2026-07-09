@@ -3,17 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!grid) return;
 
   const cards = Array.from(grid.querySelectorAll(".products-card"));
-  const buttons = Array.from(document.querySelectorAll("[data-category-list] [data-category]"));
   const search = document.querySelector("[data-product-search]");
   const empty = document.querySelector("[data-products-empty]");
-  const hashToCategory = {
-    "metallic-gasket": "metallic",
-    "non-metallic-gasket": "non-metallic",
-    "gasket-sheet": "sheet",
-    "gland-packing": "packing",
-    "gasket-materials": "materials"
-  };
-  let activeCategory = "metallic";
 
   const normalize = (value) => (value || "").toLowerCase().trim();
 
@@ -22,11 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let visibleCount = 0;
 
     cards.forEach((card) => {
-      const categories = normalize(card.dataset.category).split(/\s+/);
       const text = normalize(`${card.textContent} ${card.dataset.keywords || ""}`);
-      const categoryMatch = activeCategory === "all" || categories.includes(activeCategory);
       const searchMatch = !query || text.includes(query);
-      const visible = categoryMatch && searchMatch;
+      const visible = searchMatch;
       card.hidden = !visible;
       if (visible) visibleCount += 1;
     });
@@ -34,34 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (empty) empty.hidden = visibleCount > 0;
   };
 
-  const activateCategory = (category, shouldUpdateHash = true) => {
-    activeCategory = category || "metallic";
-
-    buttons.forEach((item) => {
-      const isActive = item.dataset.category === activeCategory;
-      item.classList.toggle("is-active", isActive);
-
-      if (isActive && shouldUpdateHash && item.dataset.categoryHash) {
-        history.replaceState(null, "", `#${item.dataset.categoryHash}`);
-      }
-    });
-
-    applyFilters();
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      activateCategory(button.dataset.category || "metallic");
-    });
-  });
-
   if (search) {
     search.addEventListener("input", applyFilters);
   }
-
-  window.addEventListener("hashchange", () => {
-    activateCategory(hashToCategory[window.location.hash.replace("#", "")] || "metallic", false);
-  });
 
   cards.forEach((card) => {
     const link = card.querySelector("a[href]");
@@ -84,5 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  activateCategory(hashToCategory[window.location.hash.replace("#", "")] || "metallic", false);
+  applyFilters();
 });

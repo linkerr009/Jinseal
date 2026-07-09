@@ -86,8 +86,8 @@
 .contact-hero h1 {
   max-width: 760px;
   color: #ffffff;
-  font-size: 52px;
-  line-height: 1.06;
+  font-size: 40px;
+  line-height: 1.1;
 }
 
 .contact-hero__copy > p {
@@ -696,7 +696,7 @@
   }
 
   .contact-hero h1 {
-    font-size: 2.45rem;
+    font-size: 2.25rem;
   }
 
   .contact-overview,
