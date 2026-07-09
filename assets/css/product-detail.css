@@ -72,14 +72,14 @@
   margin: 0;
   max-width: 720px;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 800;
   line-height: 1.1;
 }
 
 @media (max-width: 640px) {
   .pd-hero h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -192,7 +192,7 @@
 .pd-summary h2 {
   margin: 0;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: clamp(1.8rem, 2.55vw, 2.65rem);
+  font-size: clamp(1.65rem, 2.25vw, 2.25rem);
   font-weight: 800;
   line-height: 1.12;
 }
@@ -311,9 +311,9 @@
   margin: 0;
   color: #0f172a;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.55rem, 2.15vw, 2.1rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.16;
 }
 
 .pd-block > p {
@@ -486,11 +486,11 @@
 .pd-side-card h3 {
   margin: 0;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   line-height: 1.15;
 }
 
-.pd-side-card span {
+.pd-side-card > span {
   display: block;
   margin-top: 0.8rem;
   color: rgba(255, 255, 255, 0.76);
@@ -510,6 +510,14 @@
   text-transform: uppercase;
 }
 
+.pd-side-card a .material-symbols-outlined {
+  display: inline-flex;
+  margin: 0;
+  color: currentColor;
+  font-size: 20px;
+  line-height: 1;
+}
+
 .pd-side-card ul {
   display: grid;
   gap: 0.7rem;
@@ -521,8 +529,19 @@
 .pd-side-card li {
   border-bottom: 1px solid #e2e8f0;
   padding-bottom: 0.7rem;
+}
+
+.pd-side-card li a {
+  display: block;
+  margin: 0;
   color: #334155;
   font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.pd-side-card li a:hover {
+  color: #7dc431;
 }
 
 .pd-section-head {
@@ -530,7 +549,7 @@
 }
 
 .pd-section-head h2 {
-  font-size: clamp(1.7rem, 2.25vw, 2.35rem);
+  font-size: clamp(1.45rem, 1.95vw, 1.95rem);
   line-height: 1.15;
 }
 
