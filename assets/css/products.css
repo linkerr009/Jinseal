@@ -9,10 +9,10 @@
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 1rem;
-  color: #7dc431;
+  color: #0f172a;
   font-family: Inter, sans-serif;
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -21,6 +21,10 @@
   margin: 0;
   color: inherit;
   letter-spacing: 0;
+}
+
+.products-eyebrow--inverse {
+  color: #7dc431;
 }
 
 .products-eyebrow span {
@@ -301,8 +305,8 @@
 .products-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 1.2rem;
+  object-fit: cover;
+  padding: 0;
   transition: transform 0.35s ease;
 }
 
@@ -327,8 +331,8 @@
 }
 
 .products-card h3 {
-  min-height: 3.2rem;
-  margin: 0;
+  min-height: 2.45rem;
+  margin: 0 0 0.25rem;
   color: #0f172a;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.28rem;
@@ -339,7 +343,7 @@
 .products-card ul {
   display: grid;
   gap: 0.45rem;
-  margin: 0.55rem 0 1.2rem;
+  margin: 0.25rem 0 1.2rem;
   padding: 0;
   list-style: none;
 }
