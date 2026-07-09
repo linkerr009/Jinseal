@@ -797,13 +797,24 @@
   gap: 0.9rem;
 }
 
-.about-industries__grid span {
+.about-industries__grid span,
+.about-industries__grid a {
+  display: block;
   border: 1px solid #e2e8f0;
   background: #ffffff;
   padding: 1rem;
   color: #0f172a;
   font-weight: 700;
   text-align: center;
+  text-decoration: none;
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.about-industries__grid a:hover {
+  border-color: rgba(125, 196, 49, 0.55);
+  color: #5fa021;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
 }
 
 .about-cta {
