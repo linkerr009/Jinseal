@@ -31,7 +31,16 @@
 <div class="xz-header__nav">
 <a href="./index.html">Home</a>
 <a href="./about.html">About</a>
-<a href="./products.html">Products</a>
+<div class="xz-nav-item">
+<a class="xz-nav-link" href="./products.html">Products <span class="material-symbols-outlined">expand_more</span></a>
+<div class="xz-nav-dropdown">
+<a href="./products.html#metallic-gasket">Metallic Gasket</a>
+<a href="./products.html#non-metallic-gasket">Non Metallic Gasket</a>
+<a href="./products.html#gasket-sheet">Gasket Sheet</a>
+<a href="./products.html#gland-packing">Gland Packing</a>
+<a href="./products.html#gasket-materials">Gasket Materials</a>
+</div>
+</div>
 <a href="./index.html#industry">Industry</a>
 <a href="./contact.html">Contact</a>
 </div>
@@ -88,13 +97,11 @@
 <div class="products-panel">
 <h2>Product Categories</h2>
 <div class="products-category-list" data-category-list>
-<button class="is-active" type="button" data-category="all">All Products</button>
-<button type="button" data-category="metallic">Metallic Gasket</button>
-<button type="button" data-category="non-metallic">Non Metallic Gasket</button>
-<button type="button" data-category="packing">Gland Packing</button>
-<button type="button" data-category="sheet">Gasket Sheet</button>
-<button type="button" data-category="materials">Gasket Materials</button>
-<button type="button" data-category="accessories">Sealing Accessories</button>
+<button class="is-active" type="button" data-category="metallic" data-category-hash="metallic-gasket">Metallic Gasket</button>
+<button type="button" data-category="non-metallic" data-category-hash="non-metallic-gasket">Non Metallic Gasket</button>
+<button type="button" data-category="sheet" data-category-hash="gasket-sheet">Gasket Sheet</button>
+<button type="button" data-category="packing" data-category-hash="gland-packing">Gland Packing</button>
+<button type="button" data-category="materials" data-category-hash="gasket-materials">Gasket Materials</button>
 </div>
 </div>
 <div class="products-side-cta">
@@ -154,7 +161,7 @@
 <a href="./contact.html#inquiry">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 </article>
-<article class="products-card" data-category="accessories materials" data-keywords="gasket hoop material spiral wound semi finished">
+<article class="products-card" data-category="materials" data-keywords="gasket hoop material spiral wound semi finished">
 <div class="products-card__media"><img src="./assets/media/jinseal/product-gasket-hoop.jpg" alt="Gasket Hoop"></div>
 <div class="products-card__body">
 <p class="products-card__label">Gasket Materials</p>
