@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('JINSEAL_THEME_VERSION', '1.0.1');
+define('JINSEAL_THEME_VERSION', '1.1.1');
 define('JINSEAL_THEME_DIR', get_template_directory());
 define('JINSEAL_THEME_URI', get_template_directory_uri());
 
@@ -12,6 +12,9 @@ require_once JINSEAL_THEME_DIR . '/assets/acf/register-content.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/sync-field-groups.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-site.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-pages.php';
+require_once JINSEAL_THEME_DIR . '/assets/acf/fields-home.php';
+require_once JINSEAL_THEME_DIR . '/assets/acf/fields-about.php';
+require_once JINSEAL_THEME_DIR . '/assets/acf/fields-contact.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-product.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-industry.php';
 
@@ -63,7 +66,8 @@ add_action('wp_enqueue_scripts', function () {
 
     if (is_singular('jinseal_product')) {
         wp_enqueue_style('jinseal-contact', JINSEAL_THEME_URI . '/assets/css/contact.css', ['jinseal-global'], JINSEAL_THEME_VERSION);
-        wp_enqueue_style('jinseal-product-detail', JINSEAL_THEME_URI . '/assets/css/product-detail.css', ['jinseal-global', 'jinseal-contact'], JINSEAL_THEME_VERSION);
+        wp_enqueue_style('jinseal-products', JINSEAL_THEME_URI . '/assets/css/products.css', ['jinseal-global', 'jinseal-contact'], JINSEAL_THEME_VERSION);
+        wp_enqueue_style('jinseal-product-detail', JINSEAL_THEME_URI . '/assets/css/product-detail.css', ['jinseal-global', 'jinseal-contact', 'jinseal-products'], JINSEAL_THEME_VERSION);
         wp_enqueue_script('jinseal-product-detail', JINSEAL_THEME_URI . '/assets/js/product-detail.js', [], JINSEAL_THEME_VERSION, true);
         wp_enqueue_script('jinseal-contact', JINSEAL_THEME_URI . '/assets/js/contact.js', [], JINSEAL_THEME_VERSION, true);
     }

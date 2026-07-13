@@ -482,6 +482,52 @@
   text-decoration: none;
 }
 
+.contact-form .fluentform,
+.contact-form .frm-fluent-form {
+  margin: 0;
+}
+
+.contact-form .ff-el-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form .ff-el-input--label label {
+  margin-bottom: 0.45rem;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-form .ff-el-form-control {
+  min-height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0;
+  background: #f8fafc;
+  padding: 0.8rem 0.95rem;
+  color: #0f172a;
+  font-size: 0.88rem;
+}
+
+.contact-form textarea.ff-el-form-control {
+  min-height: 132px;
+}
+
+.contact-form .ff-btn-submit {
+  min-height: 48px;
+  border: 0;
+  border-radius: 0;
+  background: #7dc431;
+  padding: 0 1.55rem;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 28px rgba(125, 196, 49, 0.22);
+}
+
 .contact-map__head {
   max-width: 760px;
   margin-bottom: 2rem;

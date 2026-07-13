@@ -13,6 +13,7 @@ add_action('acf/init', function () {
         'title' => 'Product Detail Fields',
         'fields' => [
             ['key' => 'field_product_label', 'label' => 'Product Label', 'name' => 'product_label', 'type' => 'text'],
+            ['key' => 'field_product_overview_title', 'label' => 'Overview Title', 'name' => 'product_overview_title', 'type' => 'text'],
             ['key' => 'field_product_summary', 'label' => 'Summary', 'name' => 'product_summary', 'type' => 'textarea', 'rows' => 4],
             ['key' => 'field_product_gallery', 'label' => 'Product Gallery', 'name' => 'product_gallery', 'type' => 'gallery', 'return_format' => 'id', 'preview_size' => 'medium'],
             [
@@ -48,6 +49,7 @@ add_action('acf/init', function () {
                     ['key' => 'field_product_spec_value', 'label' => 'Value', 'name' => 'value', 'type' => 'text'],
                 ],
             ],
+            ['key' => 'field_product_applications_intro', 'label' => 'Applications Intro', 'name' => 'product_applications_intro', 'type' => 'textarea', 'rows' => 3],
             [
                 'key' => 'field_product_faq',
                 'label' => 'FAQ',

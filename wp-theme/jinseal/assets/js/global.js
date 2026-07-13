@@ -88,10 +88,51 @@ tailwind.config = {
         "label-sm": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
         "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "700" }],
         "headline-xl": ["48px", { lineHeight: "1.2", fontWeight: "700" }],
-        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "0", fontWeight: "800" }],
         "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
         "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
       }
     }
   }
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".xz-header__mobile-btn");
+  const menu = document.querySelector("#xz-mobile-menu");
+
+  if (!toggle || !menu) return;
+
+  const icon = toggle.querySelector(".material-symbols-outlined");
+  const setMenuState = (open) => {
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menu.setAttribute("aria-hidden", String(!open));
+    menu.classList.toggle("is-open", open);
+    document.body.classList.toggle("xz-menu-open", open);
+    if (icon) icon.textContent = open ? "close" : "menu";
+  };
+
+  toggle.addEventListener("click", () => {
+    setMenuState(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  menu.querySelectorAll(".xz-mobile-menu__group > button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const open = button.getAttribute("aria-expanded") !== "true";
+      button.setAttribute("aria-expanded", String(open));
+      button.nextElementSibling?.classList.toggle("is-open", open);
+    });
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuState(false);
+  });
+
+  window.matchMedia("(min-width: 861px)").addEventListener("change", (event) => {
+    if (event.matches) setMenuState(false);
+  });
+});

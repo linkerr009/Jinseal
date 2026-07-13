@@ -29,6 +29,23 @@ function jinseal_image($image, string $size = 'large', array $attr = []): string
     return '';
 }
 
+function jinseal_image_url($image, string $size = 'full'): string {
+    if (is_array($image) && isset($image['ID'])) {
+        $image = (int) $image['ID'];
+    }
+
+    if (!is_numeric($image)) {
+        return '';
+    }
+
+    return (string) wp_get_attachment_image_url((int) $image, $size);
+}
+
+function jinseal_field_rows(string $key, $post_id = null, array $default = []): array {
+    $rows = jinseal_acf_value($key, $post_id, $default);
+    return is_array($rows) ? $rows : $default;
+}
+
 function jinseal_term_image(string $field, WP_Term $term, string $size = 'large', array $attr = []): string {
     return jinseal_image(jinseal_acf_value($field, $term), $size, $attr);
 }
@@ -57,7 +74,14 @@ function jinseal_product_card(WP_Post $post): void {
                 <p class="products-card__label"><?php echo esc_html($terms[0]->name); ?></p>
             <?php endif; ?>
             <h3><?php echo esc_html(get_the_title($post)); ?></h3>
-            <?php if ($post->post_excerpt) : ?>
+            <?php $features = jinseal_field_rows('product_features', $post->ID); ?>
+            <?php if ($features) : ?>
+                <ul>
+                    <?php foreach (array_slice($features, 0, 3) as $feature) : ?>
+                        <li><?php echo esc_html($feature['feature'] ?? ''); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php elseif ($post->post_excerpt) : ?>
                 <p><?php echo esc_html(wp_trim_words($post->post_excerpt, 18)); ?></p>
             <?php endif; ?>
             <a href="<?php echo esc_url(get_permalink($post)); ?>"><?php esc_html_e('View Details', 'jinseal'); ?> <span class="material-symbols-outlined">arrow_forward</span></a>
@@ -65,4 +89,3 @@ function jinseal_product_card(WP_Post $post): void {
     </article>
     <?php
 }
-

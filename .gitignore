@@ -4,3 +4,5 @@
 /src/media/media-*
 /jinseal-hostinger-deploy.zip
 /assets/media/media-*
+/.tools/
+/build/
