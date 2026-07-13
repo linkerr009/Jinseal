@@ -136,3 +136,86 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.matches) setMenuState(false);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector("[data-inquiry-modal]");
+  const mount = modal?.querySelector("[data-inquiry-modal-mount]");
+  const formCard = document.querySelector("[data-inquiry-form-card]");
+  const triggers = document.querySelectorAll("[data-inquiry-popup]");
+
+  if (!modal || !mount || !formCard || triggers.length === 0) return;
+
+  let placeholder = null;
+  let previousFocus = null;
+  let closeTimer = null;
+
+  const closeButton = modal.querySelector(".xz-inquiry-modal__close");
+  const focusableSelector = "a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex='-1'])";
+
+  const openModal = (trigger) => {
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+
+    previousFocus = trigger;
+    placeholder = document.createElement("div");
+    placeholder.className = "xz-inquiry-placeholder";
+    placeholder.style.height = `${formCard.getBoundingClientRect().height}px`;
+    formCard.before(placeholder);
+    mount.append(formCard);
+
+    modal.hidden = false;
+    document.body.classList.add("xz-modal-open");
+    window.requestAnimationFrame(() => {
+      modal.classList.add("is-open");
+      closeButton?.focus();
+    });
+  };
+
+  const closeModal = () => {
+    if (modal.hidden) return;
+
+    modal.classList.remove("is-open");
+    document.body.classList.remove("xz-modal-open");
+    closeTimer = window.setTimeout(() => {
+      if (placeholder?.isConnected) placeholder.replaceWith(formCard);
+      placeholder = null;
+      modal.hidden = true;
+      previousFocus?.focus();
+      closeTimer = null;
+    }, 220);
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      openModal(trigger);
+    });
+  });
+
+  modal.querySelectorAll("[data-inquiry-close]").forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  modal.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(modal.querySelectorAll(focusableSelector)).filter((element) => element.offsetParent !== null);
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+});

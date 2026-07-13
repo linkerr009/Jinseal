@@ -50,7 +50,7 @@ $logo = jinseal_option('site_logo');
             <a href="<?php echo esc_url(jinseal_page_url('contact')); ?>">Contact</a>
         </div>
         <div class="xz-header__actions">
-            <a class="xz-header__cta" href="<?php echo esc_url(jinseal_page_url('contact') . '#inquiry'); ?>">Request a Quote</a>
+            <a class="xz-header__cta" href="<?php echo esc_url(jinseal_page_url('contact') . '#inquiry'); ?>" data-inquiry-popup>Request a Quote</a>
         </div>
         <div class="xz-header__mobile">
             <button
@@ -92,7 +92,7 @@ $logo = jinseal_option('site_logo');
                 </div>
             </div>
             <a href="<?php echo esc_url(jinseal_page_url('contact')); ?>">Contact</a>
-            <a class="xz-mobile-menu__cta" href="<?php echo esc_url(jinseal_page_url('contact') . '#inquiry'); ?>">Request a Quote</a>
+            <a class="xz-mobile-menu__cta" href="<?php echo esc_url(jinseal_page_url('contact') . '#inquiry'); ?>" data-inquiry-popup>Request a Quote</a>
         </div>
     </div>
 </nav>

@@ -37,7 +37,7 @@ $industries = get_terms(['taxonomy' => 'jinseal_industry', 'hide_empty' => false
                 <p class="font-body-lg text-inverse-on-surface max-w-2xl"><?php echo esc_html(jinseal_acf_value('hero_text', $page_id, 'One-stop metallic and non-metallic sealing, gasket and material manufacturer and solution provider.')); ?></p>
                 <p class="font-body-md text-white/80 max-w-2xl"><?php echo esc_html(jinseal_acf_value('home_hero_secondary_text', $page_id, 'JinSeal supplies gaskets, gland packing, sealing sheets, semi-finished products, sealing machines and sealing accessories for global industrial customers.')); ?></p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#inquiry" class="bg-energy-red text-white px-8 py-4 rounded font-label-sm text-center uppercase tracking-wider hover:bg-primary transition-all active:scale-95 shadow-lg shadow-energy-red/20 flex items-center justify-center gap-2">Request a Quote <span class="material-symbols-outlined">arrow_forward</span></a>
+                    <a href="#inquiry" data-inquiry-popup class="bg-energy-red text-white px-8 py-4 rounded font-label-sm text-center uppercase tracking-wider hover:bg-primary transition-all active:scale-95 shadow-lg shadow-energy-red/20 flex items-center justify-center gap-2">Request a Quote <span class="material-symbols-outlined">arrow_forward</span></a>
                     <a href="<?php echo esc_url(jinseal_products_url()); ?>" class="bg-transparent border border-outline-variant text-white px-8 py-4 rounded font-label-sm text-center uppercase tracking-wider hover:bg-primary hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-2">View Products</a>
                 </div>
             </div>
@@ -92,7 +92,7 @@ $industries = get_terms(['taxonomy' => 'jinseal_industry', 'hide_empty' => false
                 <h2 class="font-headline-xl text-deep-navy mb-4 text-[32px] font-extrabold leading-[1.2]"><?php echo esc_html(jinseal_acf_value('home_products_title', $page_id, 'Our Sealing Products')); ?></h2>
                 <p class="font-body-lg text-steel-gray max-w-3xl mx-auto"><?php echo esc_html(jinseal_acf_value('home_products_text', $page_id, 'One-stop selection of gasket, packing and sheet materials for demanding industrial sealing applications.')); ?></p>
             </div>
-            <div class="products-grid">
+            <div class="products-grid home-products-grid">
                 <?php foreach (get_posts(['post_type' => 'jinseal_product', 'posts_per_page' => 8, 'orderby' => 'menu_order date', 'order' => 'ASC']) as $product) : ?>
                     <?php jinseal_product_card($product); ?>
                 <?php endforeach; ?>

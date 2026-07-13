@@ -52,7 +52,7 @@ $checklist = jinseal_field_rows('inquiry_checklist', 'option', [
                     <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone)); ?>"><span class="material-symbols-outlined">call</span><?php echo esc_html($phone); ?></a>
                 </div>
             </div>
-            <div class="contact-form">
+            <div class="contact-form" data-inquiry-form-card>
                 <div class="contact-form__head">
                     <p>Inquiry Form</p>
                     <h3>Tell us what you need</h3>
