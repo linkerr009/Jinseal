@@ -8,7 +8,7 @@ add_action('acf/init', function () {
         return;
     }
 
-    acf_add_local_field_group([
+    jinseal_register_acf_field_group([
         'key' => 'group_jinseal_product_fields',
         'title' => 'Product Detail Fields',
         'fields' => [
@@ -64,4 +64,3 @@ add_action('acf/init', function () {
         'location' => [[['param' => 'post_type', 'operator' => '==', 'value' => 'jinseal_product']]],
     ]);
 });
-

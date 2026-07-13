@@ -18,7 +18,7 @@ add_action('acf/init', function () {
         ]);
     }
 
-    acf_add_local_field_group([
+    jinseal_register_acf_field_group([
         'key' => 'group_jinseal_site_settings',
         'title' => 'JinSeal Site Settings',
         'fields' => [
@@ -33,4 +33,3 @@ add_action('acf/init', function () {
         'location' => [[['param' => 'options_page', 'operator' => '==', 'value' => 'jinseal-settings']]],
     ]);
 });
-

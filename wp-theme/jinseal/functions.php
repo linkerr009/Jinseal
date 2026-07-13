@@ -3,12 +3,13 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('JINSEAL_THEME_VERSION', '1.0.0');
+define('JINSEAL_THEME_VERSION', '1.0.1');
 define('JINSEAL_THEME_DIR', get_template_directory());
 define('JINSEAL_THEME_URI', get_template_directory_uri());
 
 require_once JINSEAL_THEME_DIR . '/inc/helpers.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/register-content.php';
+require_once JINSEAL_THEME_DIR . '/assets/acf/sync-field-groups.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-site.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-pages.php';
 require_once JINSEAL_THEME_DIR . '/assets/acf/fields-product.php';
@@ -25,6 +26,7 @@ add_action('after_setup_theme', function () {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('tailwind', 'https://cdn.tailwindcss.com?plugins=forms,container-queries', [], null, false);
+    wp_enqueue_script('jinseal-global', JINSEAL_THEME_URI . '/assets/js/global.js', ['tailwind'], JINSEAL_THEME_VERSION, false);
     wp_enqueue_style('jinseal-fonts', 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500;600&display=swap', [], null);
     wp_enqueue_style('jinseal-icons', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap', [], null);
     wp_enqueue_style('jinseal-global', JINSEAL_THEME_URI . '/assets/css/global.css', [], JINSEAL_THEME_VERSION);
@@ -65,6 +67,4 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('jinseal-product-detail', JINSEAL_THEME_URI . '/assets/js/product-detail.js', [], JINSEAL_THEME_VERSION, true);
         wp_enqueue_script('jinseal-contact', JINSEAL_THEME_URI . '/assets/js/contact.js', [], JINSEAL_THEME_VERSION, true);
     }
-
-    wp_enqueue_script('jinseal-global', JINSEAL_THEME_URI . '/assets/js/global.js', [], JINSEAL_THEME_VERSION, true);
 });
