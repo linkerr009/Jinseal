@@ -419,12 +419,12 @@
 .contact-form {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 2rem;
+  padding: 1.6rem;
   box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
 }
 
 .contact-form__head {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .contact-form__head p {
@@ -545,7 +545,7 @@
   min-width: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.7rem 0.85rem;
 }
 
 .contact-form .ff_screen_reader_title {
@@ -566,7 +566,7 @@
 .contact-form .ff-name-field-wrapper .ff-t-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.7rem 0.85rem;
 }
 
 .contact-form .ff-name-field-wrapper .ff-t-cell {
@@ -575,7 +575,7 @@
 }
 
 .contact-form .ff-el-input--label label {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.3rem;
   color: #475569;
   font-size: 0.78rem;
   font-weight: 800;
@@ -584,22 +584,22 @@
 }
 
 .contact-form .ff-el-form-control {
-  min-height: 46px;
+  min-height: 44px;
   border: 1px solid #e2e8f0;
   border-radius: 0;
   background: #f8fafc;
-  padding: 0.8rem 0.95rem;
+  padding: 0.65rem 0.85rem;
   color: #0f172a;
   font-size: 0.88rem;
 }
 
 .contact-form textarea.ff-el-form-control {
-  min-height: 132px;
+  min-height: 112px;
 }
 
 .contact-form .ff-btn-submit {
   width: 100%;
-  min-height: 48px;
+  min-height: 46px;
   border: 0;
   border-radius: 0;
   background: #7dc431 !important;
@@ -873,7 +873,7 @@
   }
 
   .contact-form {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .contact-form__bottom {
