@@ -40,17 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("[data-gallery-prev]")?.addEventListener("click", () => showImage(activeIndex - 1));
   document.querySelector("[data-gallery-next]")?.addEventListener("click", () => showImage(activeIndex + 1));
 
-  const anchors = Array.from(document.querySelectorAll(".pdx-anchor a[href^='#']:not(.pdx-anchor__quote)"));
-  const sections = anchors.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
-  const setActiveAnchor = () => {
-    const marker = window.scrollY + 230;
-    let activeSection = sections[0];
-    sections.forEach((section) => {
-      if (section.offsetTop <= marker) activeSection = section;
-    });
-    anchors.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${activeSection.id}`));
-  };
-
-  window.addEventListener("scroll", setActiveAnchor, { passive: true });
-  setActiveAnchor();
 });
