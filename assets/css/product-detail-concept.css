@@ -156,16 +156,15 @@ html { scroll-behavior: smooth; }
 .pdx-section-heading { max-width: 780px; }
 .pdx-section-heading h2, .pdx-options h2, .pdx-quality h2, .pdx-inquiry h2 { margin: 13px 0 0; color: var(--pdx-ink); font: 800 clamp(30px, 3vw, 44px)/1.12 "Hanken Grotesk", sans-serif; letter-spacing: 0; }
 .pdx-section-heading > p, .pdx-section-heading--row > p { margin: 18px 0 0; color: var(--pdx-text); font-size: 15px; line-height: 1.8; }
-.pdx-story .pdx-section-heading { margin-left: 8%; }
-.pdx-story__visual { position: relative; min-height: 580px; margin-top: 54px; overflow: hidden; background: var(--pdx-muted); }
-.pdx-story__visual > img { width: 100%; height: 580px; object-fit: contain; mix-blend-mode: multiply; }
-.pdx-story__callout { position: absolute; max-width: 260px; display: flex; gap: 12px; padding: 15px; border-left: 3px solid var(--pdx-green); background: rgba(255,255,255,.94); box-shadow: 0 18px 45px rgba(16,24,32,.1); }
-.pdx-story__callout b { color: var(--pdx-green-dark); font-size: 11px; }
-.pdx-story__callout span { color: #657185; font-size: 12px; line-height: 1.55; }
-.pdx-story__callout strong { display: block; margin-bottom: 3px; color: var(--pdx-ink); font-size: 13px; }
-.pdx-story__callout--one { top: 14%; left: 5%; }
-.pdx-story__callout--two { top: 38%; right: 4%; }
-.pdx-story__callout--three { bottom: 12%; left: 12%; }
+.pdx-story__visual { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); margin-top: 48px; border: 1px solid var(--pdx-line); }
+.pdx-story__image { min-height: 490px; display: grid; place-items: center; overflow: hidden; background: var(--pdx-muted); }
+.pdx-story__image img { width: 100%; height: 100%; max-height: 540px; object-fit: contain; mix-blend-mode: multiply; }
+.pdx-story__details { display: grid; grid-template-rows: repeat(3, 1fr); align-items: stretch; padding: 24px 38px; background: #fff; }
+.pdx-story__detail { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--pdx-line); }
+.pdx-story__detail:last-child { border-bottom: 0; }
+.pdx-story__detail b { align-self: start; padding-top: 4px; color: var(--pdx-green-dark); font-size: 12px; }
+.pdx-story__detail span { color: #657185; font-size: 14px; line-height: 1.65; }
+.pdx-story__detail strong { display: block; margin-bottom: 7px; color: var(--pdx-ink); font: 800 19px/1.2 "Hanken Grotesk", sans-serif; }
 
 .pdx-options { padding: 96px 0; background: var(--pdx-navy); color: #fff; }
 .pdx-options__layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8%; align-items: start; }
@@ -304,6 +303,8 @@ html { scroll-behavior: smooth; }
   .pdx-anchor { top: 88px; }
   .pdx-anchor .pdx-anchor__quote { display: none; }
   .pdx-proof__grid { grid-template-columns: 1fr 1fr; }
+  .pdx-story__visual { grid-template-columns: 1fr; }
+  .pdx-story__image { min-height: 420px; }
   .pdx-proof__grid > div:nth-child(odd) { border-left: 1px solid var(--pdx-line); }
   .pdx-options__layout, .pdx-specs__layout, .pdx-quality__layout, .pdx-faq__layout, .pdx-inquiry__layout { grid-template-columns: 1fr; }
   .pdx-options__list, .pdx-specs__layout, .pdx-quality__image, .pdx-faq__list, .pdx-form-mock { margin-top: 42px; }
@@ -325,12 +326,11 @@ html { scroll-behavior: smooth; }
   .pdx-proof__grid, .pdx-options__list, .pdx-industry-grid, .pdx-related__grid, .pdx-inquiry__requirements, .pdx-inquiry__channels, .pdx-form-mock__grid { grid-template-columns: 1fr; }
   .pdx-proof__grid > div { min-height: 96px; border-left: 1px solid var(--pdx-line); }
   .pdx-story, .pdx-specs, .pdx-quality, .pdx-faq, .pdx-related, .pdx-options, .pdx-applications, .pdx-inquiry { padding: 72px 0; }
-  .pdx-story .pdx-section-heading { margin-left: 0; }
-  .pdx-story__visual, .pdx-story__visual > img { min-height: 500px; height: 500px; }
-  .pdx-story__callout { max-width: 220px; }
-  .pdx-story__callout--one { top: 5%; left: 4%; }
-  .pdx-story__callout--two { top: 42%; right: 3%; }
-  .pdx-story__callout--three { bottom: 5%; left: 4%; }
+  .pdx-story__visual { margin-top: 34px; }
+  .pdx-story__image { min-height: 320px; }
+  .pdx-story__image img { max-height: 360px; }
+  .pdx-story__details { padding: 0 20px; }
+  .pdx-story__detail { grid-template-columns: 38px minmax(0, 1fr); gap: 10px; padding: 20px 0; }
   .pdx-specs__table > div { grid-template-columns: 1fr; }
   .pdx-specs__table b { padding-bottom: 5px; }
   .pdx-specs__table span { padding-top: 5px; }
