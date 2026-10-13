@@ -359,3 +359,42 @@ html { scroll-behavior: smooth; }
   .pdx-anchor { top: 72px; }
   .pdx-mobile-menu { max-height: calc(100vh - 72px); }
 }
+
+/* A focused product page: product, useful details, specifications, related items. */
+.pdx-proof,
+.pdx-options,
+.pdx-applications,
+.pdx-quality,
+.pdx-faq { display: none; }
+.pdx-hero { background: #d8e4df; }
+.pdx-hero__content { color: #18231e; }
+.pdx-hero__lead, .pdx-contact-line a, .pdx-contact-line > span { color: #52645c; }
+.pdx-hero__facts { border-color: #b8c9c1; }
+.pdx-hero__facts div + div { border-color: #b8c9c1; }
+.pdx-hero__facts span, .pdx-hero__facts strong { color: #34463e; }
+.pdx-checks { color: #34463e; }
+.pdx-story { padding: 84px 0; background: #fff; }
+.pdx-story__visual { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr); gap: 0; margin-top: 34px; background: #f4f7f5; }
+.pdx-story__image { height: 500px; }
+.pdx-story__image img { width: 100%; height: 100%; object-fit: cover; }
+.pdx-story__details { display: block; padding: 26px 34px; }
+.pdx-story__detail { min-height: 110px; grid-template-columns: 42px minmax(0, 1fr); gap: 14px; padding: 22px 0; border-right: 0; border-bottom: 1px solid #dce5e0; }
+.pdx-story__detail:last-child { border-bottom: 0; }
+.pdx-story__detail > b { color: #62a829; }
+.pdx-story__detail span { color: #66746d; }
+.pdx-story__detail strong { display: block; margin-bottom: 5px; color: #17221c; font-size: 16px; }
+.pdx-section-heading h2 { max-width: 760px; font: 600 32px/1.2 "Oswald", sans-serif; color: #17221c; }
+.pdx-section-heading > p { max-width: 760px; color: #596a61; }
+.pdx-specs { padding: 78px 0; background: #f4f7f5; }
+.pdx-specs__layout { grid-template-columns: 1fr; }
+.pdx-download { display: none; }
+.pdx-related { padding: 78px 0; }
+.pdx-related__grid > a > div { height: 250px; background: #f4f7f5; }
+.pdx-related__grid h3 { margin-top: 6px; font-size: 19px; }
+@media (max-width: 760px) {
+  .pdx-story__visual { grid-template-columns: 1fr; }
+  .pdx-story__image { height: 340px; }
+  .pdx-story__details { padding: 8px 24px; }
+  .pdx-story__detail { min-height: 0; }
+  .pdx-section-heading h2 { font-size: 27px; }
+}
