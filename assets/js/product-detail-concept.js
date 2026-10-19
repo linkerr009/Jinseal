@@ -19,19 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbs = Array.from(document.querySelectorAll("[data-pdx-thumb]"));
   const current = document.querySelector("[data-gallery-current]");
   let activeIndex = 0;
+  let imageRequest = 0;
 
   const showImage = (index) => {
     if (!mainImage || !thumbs.length) return;
     activeIndex = (index + thumbs.length) % thumbs.length;
     const thumb = thumbs[activeIndex];
-    mainImage.style.opacity = "0";
-    mainImage.style.transform = "scale(.985)";
-    window.setTimeout(() => {
+    const request = ++imageRequest;
+    const nextImage = new Image();
+    nextImage.onload = () => {
+      if (request !== imageRequest) return;
+      mainImage.removeAttribute("srcset");
+      mainImage.removeAttribute("sizes");
       mainImage.src = thumb.dataset.src;
       mainImage.alt = thumb.dataset.alt || mainImage.alt;
-      mainImage.style.opacity = "1";
-      mainImage.style.transform = "scale(1)";
-    }, 150);
+    };
+    nextImage.src = thumb.dataset.src;
     thumbs.forEach((item, itemIndex) => item.classList.toggle("is-active", itemIndex === activeIndex));
     if (current) current.textContent = String(activeIndex + 1).padStart(2, "0");
   };
